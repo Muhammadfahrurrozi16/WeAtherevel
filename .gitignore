@@ -1,0 +1,16 @@
+# Ignore semua file di folder node_modules
+node_modules/
+
+node_modules/
+# Ignore semua file di folder node_modules
+node_modules/
+
+# Ignore file environment
+.env
+
+# Ignore file log
+*.log
+
+# Ignore semua file di folder cache
+cache/
+
