@@ -6,8 +6,6 @@ This repository contains the source code and documentation for a **WeAtherevel**
 - [Background](#background)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Future Plans](#future-plans)
 
 ---
