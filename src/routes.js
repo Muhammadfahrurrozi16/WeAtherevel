@@ -10,6 +10,6 @@ router.get('/', getPlaces);
 router.get('/:id', getPlaceById);
 
 // Get place by Category
-router.get('/:city', getPlacesByCategory);
+router.get('/category/:city', getPlacesByCategory);
 
 module.exports = router;

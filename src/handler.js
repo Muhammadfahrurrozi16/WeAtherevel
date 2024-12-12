@@ -26,11 +26,15 @@ const getPlaceById = async (req, res) => {
 
 // Get place by Category
 const getPlacesByCategory = async (req, res) => {
+    const { city } = req.params;
     try {
         const [results] = await db.execute('SELECT * FROM places WHERE City = ?', [city]);
+        if (results.length === 0) {
+            return res.status(404).json({ error: 'Place not found' });
+        }
         res.json(results);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch places' });
+        res.status(500).json({ error: 'Failed to fetch place by City' });
     }
 };
 
