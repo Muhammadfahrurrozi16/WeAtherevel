@@ -19,7 +19,7 @@ Unpredictable weather conditions can significantly impact the travel experience,
 ---
 
 ## **Features**
-1. **Real-Time Weather Forecast**
+1. **Weather Forecast**
    - Provides weather predictions tailored to popular tourist destinations.
    - Highlights potential weather impacts like heavy rain, storms, or extreme heat.
 
