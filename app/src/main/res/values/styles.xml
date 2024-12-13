@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/blue</item> <!-- Warna latar belakang biru -->
+        <item name="android:textColor">@color/white</item> <!-- Warna teks putih -->
+        <item name="chipStrokeColor">@color/black</item> <!-- Warna border hitam -->
+        <item name="chipStrokeWidth">1dp</item> <!-- Ketebalan border -->
+    </style>
+</resources>

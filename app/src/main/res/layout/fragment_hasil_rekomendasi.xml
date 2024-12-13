@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.HasilRekomendasiFragment">
+
+    <!-- Gambar Tempat Wisata -->
+    <ImageView
+        android:id="@+id/iv_hasil_rekomendasi_image"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@drawable/monas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <!-- Nama Tempat Wisata -->
+    <TextView
+        android:id="@+id/tv_hasil_rekomendasi_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Monumen Nasional"
+        app:layout_constraintTop_toBottomOf="@id/iv_hasil_rekomendasi_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <!-- Kota/Provinsi -->
+    <TextView
+        android:id="@+id/tv_hasil_rekomendasi_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/tv_hasil_rekomendasi_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- Deskripsi Tempat Wisata -->
+    <TextView
+        android:id="@+id/tv_hasil_rekomendasi_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:text="Monumen Nasional, atau yang lebih akrab disebut Monas, adalah ikonik Jakarta sekaligus simbol perjuangan bangsa Indonesia. Menjulang tinggi di tengah Lapangan Medan Merdeka, bangunan berbentuk obelisk ini menjadi saksi bisu sejarah perjuangan kemerdekaan. Dengan tinggi 132 meter, Monas dilengkapi dengan cawan emas di puncaknya yang melambangkan semangat berkobar-kobar. Di dalam cawan tersebut, terdapat kapsul waktu yang berisi pesan bagi generasi mendatang. Selain sebagai monumen bersejarah, Monas juga menjadi destinasi wisata populer yang menawarkan pemandangan kota Jakarta dari ketinggian."
+        app:layout_constraintTop_toBottomOf="@id/tv_hasil_rekomendasi_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Subtitle untuk Daftar Rekomendasi -->
+    <TextView
+        android:id="@+id/tv_hasil_rekomendasi_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rekomendasi Tempat Wisata Lainnya"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_hasil_rekomendasi_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView untuk Daftar Tempat Wisata -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hasil_rekomendasi_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_hasil_rekomendasi_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_rekomendasi_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

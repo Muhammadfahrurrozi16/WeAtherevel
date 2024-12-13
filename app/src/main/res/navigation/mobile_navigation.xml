@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation">
+
+    <!-- Halaman Home -->
+
+    <!-- Halaman Splash Screen -->
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.weatheravel.SplashScreenFragment"
+        android:label="Splash Screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_rekomendasiPage"
+            app:destination="@id/rekomendasiPage" />
+    </fragment>
+
+    <!-- Halaman Filter -->
+
+    <!-- Halaman Rekomendasi -->
+    <fragment
+        android:id="@+id/rekomendasiPage"
+        android:name="com.example.weatheravel.RekomendasiPage"
+        android:label="Rekomendasi Page"
+        tools:layout="@layout/fragment_rekomendasi_page">
+        <action
+            android:id="@+id/action_rekomendasiPage_to_hasilRekomendasiFragment"
+            app:destination="@id/hasilRekomendasiFragment" />
+    </fragment>
+
+    <!-- Halaman Hasil Rekomendasi -->
+    <fragment
+        android:id="@+id/hasilRekomendasiFragment"
+        android:name="com.example.weatheravel.ui.HasilRekomendasiFragment"
+        android:label="Hasil Rekomendasi"
+        tools:layout="@layout/fragment_hasil_rekomendasi">
+        <action
+            android:id="@+id/action_hasilRekomendasiFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <!-- Halaman Detail -->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.weatheravel.DetailFragment"
+        android:label="Detail Wisata"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="destination_name"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
