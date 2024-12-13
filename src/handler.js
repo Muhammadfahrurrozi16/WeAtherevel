@@ -1,6 +1,5 @@
-const db = require('./connection_db'); // Koneksi ke database
+const db = require('./connection_db');
 
-// Get all places
 const getPlaces = async (req, res) => {
     try {
         const [results] = await db.execute('SELECT * FROM places');
@@ -10,7 +9,6 @@ const getPlaces = async (req, res) => {
     }
 };
 
-// Get place by ID
 const getPlaceById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -24,7 +22,6 @@ const getPlaceById = async (req, res) => {
     }
 };
 
-// Get place by Category
 const getPlacesByCategory = async (req, res) => {
     const { city } = req.params;
     try {

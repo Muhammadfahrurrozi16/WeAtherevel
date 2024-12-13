@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const placesRoutes = require('./routes'); // Pastikan path sesuai
+const placesRoutes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

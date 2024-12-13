@@ -1,0 +1,7 @@
+runtime: nodejs20
+
+service: api-internal
+
+handlers:
+- url: /.*
+  script: auto
